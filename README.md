@@ -11,7 +11,7 @@ NRP | Nama
 ### SOAL 1
 Sebutkan web server yang digunakan pada "monta.if.its.ac.id"!
 #### Penjelasan
-ip.src == 103.94.189.5 && http.server
+```ip.src == 103.94.189.5 && http.server```
 
 
 ### SOAL 2
@@ -21,31 +21,31 @@ Ishaq sedang bingung mencari topik ta untuk semester ini, lalu ia datang ke webs
 ### SOAL 3
 Filter sehingga wireshark hanya menampilkan paket yang menuju port 80! 
 #### Penjelasan
-tcp.dstport == 80 || udp.dstport == 80
+```tcp.dstport == 80 || udp.dstport == 80```
 
 
 ### SOAL 4
 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 21!
 #### Penjelasan
-tcp.srcport == 21 || udp.srcport == 21
+```tcp.srcport == 21 || udp.srcport == 21```
 
 
 ### SOAL 5
 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!
 #### Penjelasan
-tcp.srcport == 443 || udp.srcport == 443
+```tcp.srcport == 443 || udp.srcport == 443```
 
 
 ### SOAL 6
 Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id !
 #### Penjelasan
-ip.dst == 203.160.128.158
+```ip.dst == 203.160.128.158```
 
 
 ### SOAL 7
 Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
 #### Penjelasan
-ip.src == 192.168.100.131
+```ip.src == 192.168.100.131```
 
 
 ### Untuk soal 8-10, silahkan baca cerita di bawah ini!
