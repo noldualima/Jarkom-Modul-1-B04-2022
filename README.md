@@ -70,18 +70,41 @@ Kita disuruh mencari percakapan antara 2 mahasiswa terkait tukar menukar jawaban
 ![messageImage_1664022128838](https://user-images.githubusercontent.com/91501217/192098571-3fd59bb4-33d8-4681-8f98-6402bcf46ee3.jpg)
 
 Kemudian kita Follow dengan cara klik kanan lalu arahkan ke Follow > TCP
-![messageImage_1664022260012](https://user-images.githubusercontent.com/91501217/192098662-f0d90eda-cf88-4258-aff0-29354752891f.jpg)
+![messageImage_1664022255810](https://user-images.githubusercontent.com/91501217/192098791-6b2e90f4-9038-4c0c-bc48-d7d7caa1fe7f.jpg)
 Maka keluar percakapan antara mereka berdua
 ![messageImage_1664022260012](https://user-images.githubusercontent.com/91501217/192098730-d5621ee5-a5c3-44e7-9f92-944440d4f177.jpg)
 
 ### SOAL 9
 Terdapat laporan adanya pertukaran file yang dilakukan oleh kedua mahasiswa dalam percakapan yang diperoleh, carilah file yang dimaksud! Untuk memudahkan laporan kepada atasan, beri nama file yang ditemukan dengan format [nama_kelompok].des3 dan simpan output file dengan nama “flag.txt”.
 #### Penjelasan
+Lalu kita di suruh mencari file yang ada di dalam percakapan tersebut kedua mahasiswa tersebut bertukar jawaban melalui file. dan mereka mengirim file melewati ```port 9002```. kita cari port 9002 tersebut di display packet untuk mencari file nya, kemudian di follow untuk melihat file yang masih dalam bentuk decrypt des3. Sebelum kita save harus kita ubah dalam bentuk raw agar bisa diberi format ```.des3"``` dengan nama file ```B04.des3```
+
+Cari menggunakan ```tcp contains jawaban```
+![messageImage_1664022326590](https://user-images.githubusercontent.com/91501217/192098889-bec11e71-97d8-497e-99e3-815cfb4d9d9a.jpg)
+
+Lalu kemudian Follow > TCP
+![messageImage_1664022347965](https://user-images.githubusercontent.com/91501217/192098952-147b643d-89e8-4161-b4ac-8b9c5ae89490.jpg)
+
+Setelah itu muncul seperti ini file yang berbentuk encrypt lalu kita ubah ke raw
+![messageImage_1664022358722](https://user-images.githubusercontent.com/91501217/192099006-9ad79a9c-9eba-4e1b-a626-ec298b26ef0f.jpg)
+setelah itu berubah seperti ini lalu save dengan nama file B04.des3 karena nama kelompok
+![messageImage_1664022370189](https://user-images.githubusercontent.com/91501217/192099048-b1c862f6-b183-4772-a160-6abc5621c2e3.jpg)
+
+Lalu buka WSL Ubuntu untuk mendecrypt file des3 tersebut dengan menggunakan syntax ```openssl des3 -d -salt -in namafile -out keluaran file yang ingin di ekstrak```.
+Kemudian kita di minta password pada file tersebut dengan clue 5 anime kembar yaitu passwordnya nakano
+![messageImage_1664022660258](https://user-images.githubusercontent.com/91501217/192099095-52f2367b-a96f-4448-8b7b-6e5240f9267a.jpg)
+Akan muncul notif seperti ini berarti decrypt des3 nya telah berhasil
+![messageImage_1664024186987](https://user-images.githubusercontent.com/91501217/192099171-a6a6eafa-fb42-48b8-9549-7d0ac71d69b9.jpg)
+Dan isi dari file tersebut adalah
+![messageImage_1664022806599](https://user-images.githubusercontent.com/91501217/192099200-6422b25e-fbd2-45ac-8069-75782f63fb01.jpg)
 
 
 ### SOAL 10
 Temukan password rahasia (flag) dari organisasi bawah tanah yang disebutkan di atas!
 #### Penjelasan
-
+Kita di beri clue oleh kedua mahasiswa tersebut terkait passwordnya yang tertera di percakapan mereka
+![messageImage_1664024303231](https://user-images.githubusercontent.com/91501217/192099284-e7f055e8-61cc-4b71-9af8-16ace9060e27.jpg)
+password dari file tersebut adalah ```nakano```
 
 ### KENDALA
+Untuk kendala yang dialami adalah soal di nomor 9 untuk decrypt file nya karena penjelasan dari soal kurang jelas jadi sempat bingung membuang waktu disitu. karena di seslab tidak diberi clue untuk menggunakan linux/WSL
