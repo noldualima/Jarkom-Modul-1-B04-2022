@@ -51,7 +51,7 @@ Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!
 ### SOAL 6
 Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id !
 #### Penjelasan
-```ip.dst == 203.160.128.158```
+```tcp contains "lipi.go.id"```
 
 
 ### SOAL 7
