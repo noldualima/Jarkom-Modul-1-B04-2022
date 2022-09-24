@@ -11,12 +11,24 @@ NRP | Nama
 ### SOAL 1
 Sebutkan web server yang digunakan pada "monta.if.its.ac.id"!
 #### Penjelasan
-```ip.src == 103.94.189.5 && http.server```
+1. Melakukan filter ```http```
+![image](https://user-images.githubusercontent.com/102939348/192096248-8eaee681-2955-404e-ab52-ea2275f72be5.png)
+2. Memilih ```http/1.1 200 OK```
+![image](https://user-images.githubusercontent.com/102939348/192096296-20ec3b63-8f1e-42fc-9655-18d773dead06.png)
+3. Menuju Hypertext Transfer Protokol
+![image](https://user-images.githubusercontent.com/102939348/192096353-e0ac1bc2-c5a5-425d-b996-1da9827b1784.png)
+4. Diketahui server yang digunakan adalah ```nginx/1.10.3```
 
 
 ### SOAL 2
 Ishaq sedang bingung mencari topik ta untuk semester ini, lalu ia datang ke website monta dan menemukan detail topik pada website “monta.if.its.ac.id”, judul TA apa yang dibuka oleh ishaq ?
 #### Penjelasan
+1. Melakukan ```Export Objects -> HTTP```
+![image](https://user-images.githubusercontent.com/102939348/192096539-1d245bf8-5340-40d7-9563-99308834b53a.png)
+2. Menyimpan file dengan format html, misal memilih filename ```194``` menjadi ```194.html```
+3. Kemudian buka file ```194.html```, dan hasilnya
+![image](https://user-images.githubusercontent.com/102939348/192096731-663cd514-2559-4d60-81b8-a594ab541ad7.png)
+
 
 ### SOAL 3
 Filter sehingga wireshark hanya menampilkan paket yang menuju port 80! 
@@ -59,6 +71,10 @@ Telusuri aliran paket dalam file .pcap yang diberikan, cari informasi berguna be
 Terdapat laporan adanya pertukaran file yang dilakukan oleh kedua mahasiswa dalam percakapan yang diperoleh, carilah file yang dimaksud! Untuk memudahkan laporan kepada atasan, beri nama file yang ditemukan dengan format [nama_kelompok].des3 dan simpan output file dengan nama “flag.txt”.
 #### Penjelasan
 
+
 ### SOAL 10
 Temukan password rahasia (flag) dari organisasi bawah tanah yang disebutkan di atas!
 #### Penjelasan
+
+
+### KENDALA
