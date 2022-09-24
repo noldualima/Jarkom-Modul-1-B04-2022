@@ -4,7 +4,7 @@
 NRP | Nama
 -----------|---------------------------
 5025201025 | Dawamul Fikri Aqil
-5025201048 | Afril Muzzaqi Arif
+5025201048 | Afril Muzaqqi Arif
 5025201165 | Gabriel Solomon Sitanggang
 -----------------------------------------------------------------
 
@@ -33,31 +33,45 @@ Ishaq sedang bingung mencari topik ta untuk semester ini, lalu ia datang ke webs
 ### SOAL 3
 Filter sehingga wireshark hanya menampilkan paket yang menuju port 80! 
 #### Penjelasan
-```tcp.dstport == 80 || udp.dstport == 80```
+1. Jika kita ingin menampilkan paket yang menuju port tertentu kita dapat menggunakan ```tcp.dstport```
+![3-fix](https://user-images.githubusercontent.com/72547769/192100188-638791dd-25bf-48a0-9c05-d2088f268aa9.png)
+```tcp.dstport == 80```
 
 
 ### SOAL 4
 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 21!
 #### Penjelasan
-```tcp.srcport == 21 || udp.srcport == 21```
+1. Jika kita ingin melihat/mengambil paket dari server yang bekerja pada port tertentu kita menggunakan ```tcp.srcport```
+![4](https://user-images.githubusercontent.com/72547769/192099930-05166564-e521-4cc0-ba08-4ec30efc2018.png)
+```tcp.srcport == 21```
 
 
 ### SOAL 5
 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!
 #### Penjelasan
-```tcp.srcport == 443 || udp.srcport == 443```
+1. Mirip dengan soal nomor 5 tetapi menggunakan port yang berbeda yaitu 443, maka kita tetap menggunakan ```tcp.srcport```
+![5](https://user-images.githubusercontent.com/72547769/192099968-a009e98c-4e49-4943-84b3-6fdf7a294095.png)
+```tcp.srcport == 443```
 
 
 ### SOAL 6
 Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id !
 #### Penjelasan
+1. Jika kita hanya ingin menampilkan paket dari link web tertentu kita dapat memakai ```tcp``` dengan diikuti ```contains``` selanjutnya diikuti petik dua dari link yang akan dituju
+![6-fix](https://user-images.githubusercontent.com/72547769/192100256-d2949fa5-2204-4c66-9335-32a3c823bb4a.png)
 ```tcp contains "lipi.go.id"```
 
 
 ### SOAL 7
 Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
 #### Penjelasan
-```ip.src == 192.168.100.131```
+1. Buka wireshark kemudian pilih wifi
+![7](https://user-images.githubusercontent.com/72547769/192100330-9806ce8e-d94a-4ca1-8107-0b1fc9cd02d4.png)
+2. Buka cmd dan ketik ```ipconfig``` dan kemudian copy ip address nya dan ip address yang muncul adalah ```10.8.108.89```
+![7 1](https://user-images.githubusercontent.com/72547769/192100398-f2080191-da6b-4d95-9a98-d29f3a69b452.png)
+3. Untuk mengambil paket dari ip sendiri kita dapat memakai ```ip.src == ip masing-masing"``` dalam hal ini ip nya adalah ```10.8.108.89```
+![7 2](https://user-images.githubusercontent.com/72547769/192100451-7c097854-713c-4cc8-878a-42157243b367.png)
+```ip.src == 10.8.108.89```
 
 
 ### Untuk soal 8-10, silahkan baca cerita di bawah ini!
