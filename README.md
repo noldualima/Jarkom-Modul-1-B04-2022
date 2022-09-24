@@ -66,6 +66,7 @@ Di sebuah planet bernama Viltrumite, terdapat Kementerian Komunikasi dan Informa
 ### SOAL 8
 Telusuri aliran paket dalam file .pcap yang diberikan, cari informasi berguna berupa percakapan antara dua mahasiswa terkait tindakan kecurangan pada kegiatan praktikum. Percakapan tersebut dilaporkan menggunakan protokol jaringan dengan tingkat keandalan yang tinggi dalam pertukaran datanya sehingga kalian perlu menerapkan filter dengan protokol yang tersebut.
 #### Penjelasan
+Kita disuruh mencari percakapan antara 2 mahasiswa terkait tukar menukar jawaban atau mencontek, dan kita mencari menggunakan ```tcp contains jawaban``` tetapi tidak harus jawaban menggunakan ```tcp contains file``` juga bisa karena hanya mencari percakapan
 
 ### SOAL 9
 Terdapat laporan adanya pertukaran file yang dilakukan oleh kedua mahasiswa dalam percakapan yang diperoleh, carilah file yang dimaksud! Untuk memudahkan laporan kepada atasan, beri nama file yang ditemukan dengan format [nama_kelompok].des3 dan simpan output file dengan nama “flag.txt”.
