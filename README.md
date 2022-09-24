@@ -4,7 +4,7 @@
 NRP | Nama
 -----------|---------------------------
 5025201025 | Dawamul Fikri Aqil
-5025201048 | Afril Muzaqqi Arif
+5025201048 | Afril Muzzaqi Arif
 5025201165 | Gabriel Solomon Sitanggang
 -----------------------------------------------------------------
 
